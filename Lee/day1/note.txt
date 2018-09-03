@@ -12,7 +12,7 @@
 	1) linux /order
 		a. cli using
 		b. Running code on Ubuntu
-		c. file I/O
+		c. file I/O 	stream
 		d. xiancheng/jincheng 
 		e. network programming /socket
 	2) 6818 platform
@@ -33,6 +33,8 @@
 7. Project review.
 
 8. VMWARE ,VIRTUAL MACHINE;   
+
+
 
 9. ubuntu , GUI,FREE,open source.    ==> windows, not free, not open source
 
