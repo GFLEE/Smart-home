@@ -34,6 +34,8 @@
 
 8. VMWARE ,VIRTUAL MACHINE;   
 
+9. ubuntu , GUI,FREE,open source.    ==> windows, not free, not open source
+
 
 
 
