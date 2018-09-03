@@ -1,0 +1,43 @@
+1.  6818 (8 core,1.4G RAM, A53)
+
+2. zigbee network: host, router ,terminal node, sensors
+
+3. the sensor trans envir_data to the node ,then send it to router,router communicates with host by  serial port. note: the router and node must use the same channel to communicate with each other.
+
+4. host can connect to the server/mobile device by GSM/3G/WIFI...
+
+5. server/other device process the envir_data
+
+6. content:
+	1) linux /order
+		a. cli using
+		b. Running code on Ubuntu
+		c. file I/O
+		d. xiancheng/jincheng 
+		e. network programming /socket
+	2) 6818 platform
+		a. realize the shift of system platform
+		b. realize display of bmp/jpg picture
+		c. Play music on platform
+		d. the shift of Wifi driver and using
+		e. the use of camera on platform.
+		f. real-time monitoring  through phone
+	3) ZigBee
+		a. principles  of zigbee network (base registers operation).
+		b. LED control by zigbee.
+		c. keys's using .
+		d. protocal stack 's install.
+		e. protocla & network programming.
+		f. serial programming to get data.
+
+7. Project review.
+
+8. VMWARE ,VIRTUAL MACHINE;   
+
+
+
+
+
+
+
+
