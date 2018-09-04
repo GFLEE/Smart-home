@@ -50,9 +50,17 @@ if open successfully, then return files's id
 	buf : data to be witten in;
 	count: data size;
 
+6. ssize_t read (int fd,void *buf,size_t count);
 
+7. close(fd);
 
-
+8. cursor offset: 
+	off_t lseek(int fd,off_t offset,int whence);
+		fd: file id;
+		ffset: 
+			SEEK_SET :	the offset is set to offset bytes
+			SEEK_CUR: 当前字节加上偏移字节
+			SEEK_END:   文件末尾位置加上偏移字节
 
 
 
