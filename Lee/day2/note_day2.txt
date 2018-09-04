@@ -1,5 +1,18 @@
 
 
 1. cd ,pwd ,hostnam ,adduser
-2.socket,a
+2. ls -l d目录 c字符设备、驱动  b块设备 s套接字 p管道 l(链接文件) 
+3. 进程与线程
+   进程： 一个进程对应一个运行程序
+   线程：计算机运算的最小调度单位, 一个进程包含多个线程,these threads share common resource
+4. 文件权限 左到右 ：用户 用户组 others   || change permission:  chmod 
 
+5.  create file : touch +filename
+    create dir:  mkdir
+
+6.  file copy : cp fileName newFileName
+
+7.  cd  +dirName : enter a dir 
+    cd ../ : return to last dir
+
+8.   
