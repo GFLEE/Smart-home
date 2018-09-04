@@ -1,0 +1,5 @@
+
+
+1. cd ,pwd ,hostnam ,adduser
+2.socket,a
+
