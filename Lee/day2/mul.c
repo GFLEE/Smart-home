@@ -21,7 +21,7 @@ int main()
 		 {
 
 			
-		    printf("%d*%d=%d\t",i,j,i*j);
+		    printf("%d*%d=%d\t",j,i,i*j);
 			
 
 		 }
