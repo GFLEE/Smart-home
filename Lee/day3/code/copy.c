@@ -12,7 +12,7 @@ int main(int argc,char **argv)
 	int i;
 	int clr;
 	int file_flag;
-	char *buf;
+	char buf[100]={0};
 	printf("argc:  %d\n",argc);
 	printf("argv[3] is  %s\n",argv[3]);
 
@@ -40,41 +40,23 @@ int main(int argc,char **argv)
 	{printf("new file_creat error!");	}
  //int read_flag=	read(file_flag,buf,100);
 int read_flag=1;
- while(read_flag!=0&&buf!='0')
+ while(read_flag!=0)
  {
+	for(clr=0;clr<100;clr++)
+	{
+		buf[clr]='0';
+	}
+	 
+	 read_flag=read(file_flag,buf,100);
 
-	 buf='0';
-	 read_flag=read(file_flag,buf,1);
-
+	write(new_flag,buf,read_flag);
 	
 
 
-
-	 if(buf=='0')
-	 {
-		 break;
-	 }
-
-	 else
-	 {
-
-	 
-	write(new_flag,buf,1);
-
-	 }
-	//    close(new_flag);
-
-/*	for(clr=0;clr<100;clr++)
-	{
-	 
-		buf[clr]='0';
-	}
-	*/
-
  }
 
-//	printf("hello world");
-
+	close(file_flag);
+	close(new_flag);
 
 	return 0;
 }
