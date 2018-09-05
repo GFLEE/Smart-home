@@ -28,7 +28,10 @@ int main(int argc,char **argv)
 
 	while(1)
 	{
-		sleep(1);
+		
+	
+	/*    sleep(1);
+	  
 		
 			for(i=0;i<240;i++)
 	{
@@ -42,15 +45,37 @@ int main(int argc,char **argv)
 
 	sleep(1);
 
+	*/
 
 
-	for(i=0;i<240;i++)
+	for(i=0;i<340;i++)
 	{
-		for(j=0;j<800;j++)
+		for(j=0;j<200;j++)
 		{
 			//将颜色复制到显存
-			memcpy(FB+j*4+400*i*4 ,&blue,4);
+			memcpy(FB+j*4+200*i*4 ,&blue,4);
 		}
+		
+		sleep(1);
+		for(j=200;j<400;j++)
+		{
+			//将颜色复制到显存
+			memcpy(FB+j*4+200*i*4 ,&red,4);
+		}
+		sleep(1);
+		for(j=400;j<600;j++)
+		{
+			//将颜色复制到显存
+			memcpy(FB+j*4+200*i*4 ,&blue,4);
+		}
+		sleep(1);
+		for(j=600;j<800;j++)
+		{
+			//将颜色复制到显存
+			memcpy(FB+j*4+200*i*4 ,&red,4);
+		}
+		sleep(1);
+		
 	}
 
 
