@@ -17,7 +17,8 @@ if(fd==-1)
 
 char buf[5] = "12345";
 write(fd,buf,5);
-
+char buf2[5]="abcde";
+write(fd,buf2,5);
 printf("write finished!\n");
 
 //close(fd);
