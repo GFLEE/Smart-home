@@ -1,0 +1,67 @@
+1.	argc,argv
+	argc: paremeters count
+	argv: a string array, contains all parms
+
+2.	struct
+	{
+		int a;
+		char b;
+		flatc c;
+		.........
+	}
+
+3.	define a string in C
+	1) char str[3]="abc";
+	2) char str[]="abc";
+	3) char *str="abc";
+	4) strcpy((*str),"abc");
+
+4.	swap function
+
+	write a function swap(a,b),swap their value.
+
+	全局变量与局部变量:
+		全局变量:定义在全局作用域;
+		局部变量:定义在局部作用域,例如函数体之中.
+	另:静态变量,生命周期贯穿于整个program的执行期间
+
+5.	值传参与地址传参:It mainly about the variables's lifetime in the program,while the variable leave the function,it can not use in 
+		other where.
+	值传参: 传递值给函数
+	地址传参: 传递地址给函数
+
+6. 映射
+
+	void *mmap(void *addr,size_t length,int prot,int flags,
+			int fd,off_t offset);
+
+   参数:  addr : NULL,(系统自动分配显存的起始地址)
+     	 length :分配显存空间的大小
+		 prot:对显存的操作权限
+			PROT_READ Pages may be read.
+			PROT_WRITE Pages my be written.
+			flags:MAP_SHARED 对显存可以进行共享操作
+			fd:设置显存对象
+			offset:显存的偏移量
+	返回值: 如果映射成功,返回指向这块缓存的首地址;
+		失败返回NULL;
+
+7. 解除映射
+	 int munmap(void *addr,size_t length)
+
+8. 块复制
+	#include <string.h>
+	void *memcpyt(void *dest,const void *src,size_t n)
+
+	将src一次性复制n个字节
+
+
+
+
+	
+
+
+
+
+
+
