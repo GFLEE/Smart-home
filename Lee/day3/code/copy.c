@@ -50,7 +50,6 @@ int read_flag=1;
 	 read_flag=read(file_flag,buf,100);
 
 	write(new_flag,buf,read_flag);
-	
 
 
  }
