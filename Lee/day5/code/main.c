@@ -20,7 +20,7 @@ int main(int argc,char **argv)
 				  if(jpg_flag<0)
 				  {
 					  jpg_flag=2;
-				  }// pre
+				  }
 			lcd_draw_jpg(0,0, pic_path[jpg_flag],NULL,0,0);
 
 			}
@@ -32,9 +32,7 @@ int main(int argc,char **argv)
 				  {
 					  jpg_flag=0;
 				  }
-			
 		lcd_draw_jpg(0,0, pic_path[jpg_flag],NULL,0,0);
-     //next
 			}
 			else{;}
 			
