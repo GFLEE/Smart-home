@@ -272,7 +272,7 @@ int lcd_draw_jpg(unsigned int x,unsigned int y,const char *pjpg_path,char *pjpg_
 		free(pjpg);		
 	}
 
-	close_lcd();
+//	close_lcd();
 	
 	return 0;
 }

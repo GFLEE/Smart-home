@@ -1,0 +1,9 @@
+1. TOUCH SCREEN
+
+	1)6818: capacity touch screen.
+	working princples： electricity flow through skin
+    获得触摸点的坐标(x,y);完成触摸感应
+	2)电阻式触摸屏：通过材料的可变形性从而检测坐标具体位置。
+	
+2. 不同外设的驱动将采集到的外设数据传送给I/O子系统，进行处理。
+	

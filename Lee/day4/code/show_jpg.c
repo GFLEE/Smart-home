@@ -8,7 +8,7 @@ int main(int argc,char **argv)
 	
 	int i = 0;
 	
-    char* pic_path[3] = {"./jpeg/1.jpg","./jpeg/2.jpg","./jpeg/3.jpg"};
+    char* pic_path[3] = {"./jpg/1.jpg","./jpg/2.jpg","./jpg/3.jpg"};
 	
 	while(1)
 	{
@@ -16,7 +16,7 @@ int main(int argc,char **argv)
 		{
 			i = 0;
 		}
-		lcd_draw_jpg(0,  0, pic_path[i], NULL, 0, 0);
+		lcd_draw_jpg(0,0, pic_path[i],NULL,0,0);
 		pthread_testcancel();
 		sleep(1);
 		i++;	
