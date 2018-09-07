@@ -7,3 +7,56 @@
 	
 2. 不同外设的驱动将采集到的外设数据传送给I/O子系统，进行处理。
 	
+3. 输入事件结构体
+   struct input_event
+   {
+   
+		struct timeval time;   //时间戳
+		_u16 type ;  //硬件类型，触摸屏，鼠标
+		_u16 
+		_u16_code;
+   
+   }
+ 4. 
+	1) 打开触摸屏
+    int ts_fd=open("/dev/input/event0",O_RDWR);
+	
+	2) 调用输入输出设备子系统存放获取到的坐标值
+	struct input_event myts;
+	
+	3)读取触发信息(坐标) 存放到设备子系统
+	read(ts_fd,&myts,sizeof(myts));
+	
+	4)判断读取到的内容对应的硬件类型
+	 
+	 if(myts.typt==EV_ABS && myts.code == ABS_X)
+	
+	{
+	
+		x= myts.value// 存放触摸屏x轴的数值
+		printf("x is %d\n",x);
+	
+	}
+	
+	
+	// 判断Y轴
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
