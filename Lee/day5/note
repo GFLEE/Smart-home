@@ -43,8 +43,42 @@
 	
 	5. 摄像头 ==> USB串口 ==> computer
 	
-		fps: 每秒刷新多少张图片
+		fps: 每秒刷新的图片数量
+		v4L2库 视频子系统
 		
+
+	6.编译摄像头监控代码。
+	
+	7. 将libapi_v4l2_arm.so
+	
+	8.Run
+	
+	//=============线程的创建=========
+	
+	9. #include <pthread.h>
+	 int pthread(thread,attr)
+		参数：
+			thread：线程号：
+			attr：线程属性，NULL；
+			start_routine:子线程；
+			arg: 传递给子线程的参数；
+			
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
