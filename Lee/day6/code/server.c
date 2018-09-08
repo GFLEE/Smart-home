@@ -40,7 +40,7 @@ int main(void)
 	
 	
 	// 3.send data;
-	char buf[20] = "hello";
+	char buf[20] = "Hello";
 	sendto(fd_socket,buf,20,0,(struct sockaddr *)&bind_addr,sizeof(bind_addr));
 	
 	

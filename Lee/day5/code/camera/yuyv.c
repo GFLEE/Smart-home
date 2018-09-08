@@ -242,7 +242,7 @@ static int read_frame (void)
 		// 3. 将摄像头的图像数据存放到文件里。
 
 			write(jpg_flag,dest,ret);
-			system("mv [1-9][0-9].jpg /pic");
+	//		system("mv [1-9][0-9].jpg /pic");
 			jpg_counts++;
 			
 			flage = 0;  //falge 复位
@@ -421,7 +421,7 @@ int do_camera()
 		if(flage == 3)
 		{
 			flage = 0;
-			printf("2222222222222222222\n");
+			printf("Touch screen closed succeefuly........\n");
 			goto unmap;
 		}
 		read_frame ();//如果可读，执行read_frame函数，把采集到的每一帧图像显示到开发板上
@@ -436,7 +436,7 @@ int do_camera()
 		printf("VIDIOC_STREAMOFF"); 
 	close (fd);
 	//fclose (file_fd);
-	printf("--------------------byebye--------------------\n");
+	printf("\n--------------------Bye!--------------------\n");
 	return 0;
 }
 

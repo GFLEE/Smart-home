@@ -6,7 +6,7 @@ int touch(int *x,int *y)
 
 		if(ts_fd==0)
 		{
-			printf("open touch screen failed!");
+			printf("open touch screen failed!\n");
 			return -1;
 		}
 	
