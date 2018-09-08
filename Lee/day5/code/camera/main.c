@@ -35,8 +35,12 @@ int main(int argc,char **argv)
 
 	
 
-			lcd_draw_jpg(0,0,"./touch.jpg",NULL,0,0);
+		lcd_draw_jpg(0,0,"./touch.jpg",NULL,0,0);
 		do_camera();
+		
+		pthread_join(tid,NULL);
+
+		
 
 	
 	return 0;
