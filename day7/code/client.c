@@ -19,8 +19,8 @@ int main(void)
 	//设置自己的手机卡,设置来电显示结构体
 	struct sockaddr_in bind_addr,client_addr;
 	bind_addr.sin_family = AF_INET;
-	bind_addr.sin_port = htons(2234);
-	bind_addr.sin_addr.s_addr = inet_addr("192.168.80.128");//任何人都能打电话给我
+	bind_addr.sin_port = htons(6666);
+	bind_addr.sin_addr.s_addr = inet_addr("192.168.214.128");//任何人都能打电话给我
 	
 	int len = sizeof(bind_addr);
 	//绑定手机

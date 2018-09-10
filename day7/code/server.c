@@ -21,8 +21,8 @@
 	//设置自己的手机卡
 	struct sockaddr_in bind_addr;
 	bind_addr.sin_family = AF_INET;
-	bind_addr.sin_port = htons(2234);
-	bind_addr.sin_addr.s_addr = inet_addr("192.168.80.128");//Rose的IP
+	bind_addr.sin_port = htons(6666);
+	bind_addr.sin_addr.s_addr = inet_addr("127.0.0.1");//Rose的IP
 	
 	int len = sizeof(bind_addr);
 	char buf[20] = {0};
