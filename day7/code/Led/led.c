@@ -4,43 +4,45 @@
 #define uint unsigned int
 #define uchar unsigned char
 
-//定义控制灯的端口
-#define LED1 P1_0 //定义 LED1 为 P10 口控制
-#define LED2 P1_1 //定义 LED2 为 P11 口控制
-#define LED3 P0_4 //定义 LED3 为 P04 口控制
 
-void Delay(uint);  //延时函数
-void InitIO(void); //初始化 LED 控制 IO 口函数
+#define LED1 P1_0 
+#define LED2 P1_1 
 
+ 
 
-void main(void)
-{
-  InitIO();           
-  while(1)           //死循环
-  {
-    LED1 = !LED1;    // LED1 灯闪一次
-    Delay(200);
-    LED2 = !LED2;    // LED2 灯闪一次
-    Delay(200);
-    LED3 = !LED3;    // LED3 灯闪一次
-    Delay(200);
-  }
-}
-
-
-void Delay(uint xms)
+void Delay(uint ms)
 {
    uint i,j;
-    for(i=xms;i>0;i--)
+    for(i=ms;i>0;i--)
      for(j=587;j>0;j--);   
 }
 
 
-void InitIO(void)
+void Init(void)
 {
-  P1DIR |= 0x03;  //P10、 P11 定义为输出
-  P0DIR |= 0x10;  //P04定义为输出
+  P1DIR |= 0x03;  
+  P0DIR |= 0x03; 
+  
+  P0SEL =0x00;
+  P1SEL =0x00;
+  
   LED1 = 1;
   LED2 = 1;
-  LED3 = 1;       //LED 灯初始化为关
+ 
 }
+
+int main(void)
+{
+  Init();           
+  while(1)           
+  {
+    LED1 = !LED1;    
+    Delay(200);
+    LED2 = !LED2;   
+    Delay(200);
+ 
+  }
+}
+
+
+

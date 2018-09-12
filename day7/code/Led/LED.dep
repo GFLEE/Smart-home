@@ -9,12 +9,21 @@
       <file>$PROJ_DIR$\led.c</file>
       <file>$PROJ_DIR$\Debug\Obj\led.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\LED.pbd</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256.xcl</file>
       <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
       <file>$PROJ_DIR$\Debug\Exe\LED.d51</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nlxd-1e16x01.r51</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256.xcl</file>
       <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nlxd-1e16x01.r51</file>
     </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+    </file>
     <file>
       <name>$PROJ_DIR$\led.c</name>
       <outputs>
@@ -24,17 +33,17 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 3</file>
+          <file> 4</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 7</file>
+          <file> 6</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 7</file>
+          <file> 6</file>
         </tool>
       </inputs>
     </file>
@@ -43,7 +52,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 3</file>
+          <file> 4</file>
         </tool>
       </inputs>
     </file>
@@ -52,18 +61,9 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 6 1 5</file>
+          <file> 3 1 7</file>
         </tool>
       </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
     </file>
   </configuration>
   <configuration>
