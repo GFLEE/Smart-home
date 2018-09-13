@@ -234,7 +234,7 @@ static int read_frame (void)
 		 
 		 if(jpg_flag==-1)
 		 {
-			 printf("open/create file failed!");
+			 printf("save *.jpg file failed!");
 		 }
 		 
 		
@@ -242,9 +242,9 @@ static int read_frame (void)
 		// 3. 将摄像头的图像数据存放到文件里。
 
 			write(jpg_flag,dest,ret);
-			system("mv [1-9][0-9].jpg /pic");
+	//		system("mv [1-9][0-9].jpg /pic");
 			jpg_counts++;
-			
+			 
 			flage = 0;  //falge 复位
 		
 		}
@@ -288,6 +288,9 @@ int udp_init()
 	{
 		printf("bind failed!\n");
 		return -1;
+	}
+	else{
+	//	printf("bind successful!\n");
 	}
 
 	return 0;
@@ -421,7 +424,8 @@ int do_camera()
 		if(flage == 3)
 		{
 			flage = 0;
-			printf("2222222222222222222\n");
+			printf(".........Exit....\n");
+			home();
 			goto unmap;
 		}
 		read_frame ();//如果可读，执行read_frame函数，把采集到的每一帧图像显示到开发板上
@@ -431,12 +435,12 @@ int do_camera()
 	if (-1 == munmap (buffers[i].start, buffers[i].length))
 		 printf ("munmap error");
 		 type = V4L2_BUF_TYPE_VIDEO_CAPTURE;  //关闭摄像头
-
+      
 	if (-1 == ioctl(fd, VIDIOC_STREAMOFF, &type))   
 		printf("VIDIOC_STREAMOFF"); 
 	close (fd);
 	//fclose (file_fd);
-	printf("--------------------byebye--------------------\n");
+	printf("--------------------bye bye--------------------\n");
 	return 0;
 }
 

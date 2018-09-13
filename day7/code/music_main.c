@@ -1,28 +1,8 @@
 #include "head.h"
 
 
-void *ts_func(void *arg)
+void *music(void *arg)
 {
-	/*
-	int x,y;
-	while(1)
-	{
-		touch(&x,&y);
-		if(x>700&&y<240)
-		{
-			flage=2;     //拍照
-			printf("Capturing photo Capturing photo Capturing photo...............\n");
-			}else if(x>700&&y>240){
-				
-				flage=3;   //退出
-			}
-		
-	}
-	
-	*/
-	
-	
-			
 		//==============================================
 		
 		int len=sizeof(phoneaddr);
