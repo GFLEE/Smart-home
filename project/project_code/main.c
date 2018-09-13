@@ -102,7 +102,7 @@ int home(void)
 		else if((x>= 555 && x<= 635 )&&(y>=272 && y<=360 ))    //images display
 		{
 		
-			lcd_draw_jpg(0,0,"proc.jpg",NULL,0,0);
+		//	lcd_draw_jpg(0,0,"proc.jpg",NULL,0,0);
 			image();
 		}
 		else if((x>=360 && x<=440 )&&(y>=210 && y<=310 ))   // Exit
@@ -162,25 +162,9 @@ void create_temp()
 int main(int argc,char **argv)
 {
 	
-		  //monitor thread
-	    //start
-
 		udp_init();
 	       start();
-	
-	//start();
-		
-	//	dht();
-	//	do_camera();
 
-
-
-	
-	
-
-		
-
-	
 	return 0;
 }
 
