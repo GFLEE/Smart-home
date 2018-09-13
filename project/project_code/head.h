@@ -70,5 +70,5 @@ int addrsize ;
 
 int flage;
 int temp_flag;
-int music_flag;
+int tog_flag;
 #endif

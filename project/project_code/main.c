@@ -5,7 +5,7 @@ int start(void);
 int home(void);
 void *ts_func(void *arg);
 void *shoot(void *args);
-void music(void *arg);
+void music(void);
 void *temp(void *arg);
 void *music_touch(void * arg);
 void image(void);
@@ -83,13 +83,7 @@ int home(void)
 
 		if((x>=170&&x<=260)&&(y>=133&&y<=220)) // camera monitoring
 		{
-			
-			
-		//	lcd_draw_jpg(0,0,"monitor.jpg",NULL,0,0);
-		//	do_camera();
-		   
 			create_shoot();
-			printf("camera monitoring\n");
 			
 		}
 		else if((x>=552 && x<= 630 )&&(y>= 135&& y<= 220)){     //mp3 play
@@ -97,28 +91,23 @@ int home(void)
 		
 			lcd_draw_jpg(0,0,"music.jpg",NULL,0,0);
 			create_music();
-
-			printf("mp3 play\n");
+			
 			
 		}
 		else if((x>= 168 && x<= 245)&&(y>= 270&& y<= 335))   //T&H display
 		{
 			lcd_draw_jpg(0,0,"temp_welcome.jpg",NULL,0,0);
-			create_temp();
-			printf("T&H display\n");
-			
+			create_temp();			
 		}
 		else if((x>= 555 && x<= 635 )&&(y>=272 && y<=360 ))    //images display
 		{
-			//void create_image();
+		
 			lcd_draw_jpg(0,0,"proc.jpg",NULL,0,0);
 			image();
-			printf("images display\n");
 		}
 		else if((x>=360 && x<=440 )&&(y>=210 && y<=310 ))   // Exit
 		{
 			start();
-			printf("Exit\n");
 			
 		}
 		
@@ -144,7 +133,7 @@ void create_music()
 		   pthread_t tid_music;
 		   pthread_create(&tid_music,NULL,music_touch,NULL);
 			music();
-  pthread_join(tid_music,NULL);
+		pthread_join(tid_music,NULL);
 
 }
 	
@@ -161,7 +150,7 @@ void create_temp()
 		  lcd_draw_jpg(0,0,"temp10.jpg",NULL,0,0);
 
 			dht();
-  pthread_join(tid_temp,NULL);
+			pthread_join(tid_temp,NULL);
 	
 	
 }
@@ -178,15 +167,6 @@ int main(int argc,char **argv)
 
 		udp_init();
 	       start();
-		   
-
-	
-		
-						
-		
-	
-		
-	
 	
 	//start();
 		

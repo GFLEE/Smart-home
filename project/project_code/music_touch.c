@@ -11,19 +11,25 @@ void *music_touch(void * arg)
 	
 			
 	int x,y;
-	music_flag=0;
 		while(1)
 		{	
+		
+			touch(&x,&y);
 			
-		touch(&x,&y);
 		if((x>=360&&x<=460)&&(y>=360&&y<=470))
 		 {
-			 
-			 music_flag=1;
-		
+			 printf("tog_flag= %d....\n",tog_flag);
+
+			 tog_flag=1;
+			 system("killall -9 madplay");
+			 home();
+			 break;
 		 }
 		 else{
-			music_flag=0;
+			 
+
+			 tog_flag=0;
+			
 	
 		
 		 }

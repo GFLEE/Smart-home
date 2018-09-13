@@ -1,7 +1,7 @@
 #include "head.h"
 
 
-void music(void *arg)
+void music(void)
 {
 		//==============================================
 		
@@ -14,20 +14,27 @@ void music(void *arg)
 		    int x,y;
 			
 			
-		/*	bzero(recv_buf,50);
+			bzero(recv_buf,50);
 		    //接收手机发送过来的指令，获取手机的IP和端口号
 		    recvfrom(iphonex,recv_buf,sizeof(recv_buf),0,(struct sockaddr *)&phoneaddr,&len);
 		    printf("recv_buf is %s\n",recv_buf);
 			
-			*/
+			
+			
+			
 			while(1)
 			{
+				printf("tog_flag= %d\n",tog_flag);
 				
-				if(music_flag==1)
+				if(tog_flag==1)
 				{
+					printf("music bye bye...........\n");
+					tog_flag=0;
 					home();
 					break;
+					
 				}
+				
 		
 			bzero(recv_buf,50);
 		    //接收手机发送过来的指令，获取手机的IP和端口号
@@ -44,18 +51,14 @@ void music(void *arg)
 			
 			 else if(strcmp(recv_buf,"MUSIC_PLAY")==0)
 			 {
-				 //Run
-				// system("killall -9 madplay &");
 				 system("madplay music.mp3 &");  //后台运行
-				music_flag=1;
-				
-				 
 				 
 			 }
 			 else if(strcmp(recv_buf,"BACK")==0){
 				
+				system("killall -9 madplay"); 
 				home();
-				system("killall -9 madplay");   //结束进程
+				  //结束进程
 				
 				
 				
@@ -72,7 +75,6 @@ void music(void *arg)
 					con_st=1;
 
 			}
-									//  STOP/CONTINUE
 				 
 			 }
 			
@@ -119,8 +121,12 @@ void music(void *arg)
 				;
 	
 			}
+			
+			
+			
+			
 }
-
+}
 
 
 
