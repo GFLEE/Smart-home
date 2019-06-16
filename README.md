@@ -1,4 +1,4 @@
-# Embed
+# Smart Home
 A ZigBee IoT System on gec6818(ARM) platform
 # The main page 
 ![alt text](https://github.com/GFLEE/Embed/blob/master/project/project_code/images/main.jpg)
